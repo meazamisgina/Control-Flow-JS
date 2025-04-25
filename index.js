@@ -6,23 +6,13 @@ const deliveryType = (deliveries) => {
     deliveries.forEach((delivery) => {
         switch (delivery) {
             case "monday":
-                console.log("Delivery scheduled");
-                break;
             case "tuesday":
-                console.log("Delivery scheduled");
-                break;
             case "wendsday":
-                console.log("Delivery scheduled");
-                break;
             case "thursday":
-                console.log("Delivery scheduled");
-                break;
             case "friday":
-                console.log("Delivery scheduled");
+                console.log("Sweet delivery");
                 break;
             case "saturday":
-                console.log("No delivery scheduled");
-                break;
             case "sunday":
                 console.log("No delivery scheduled");
                 break;
@@ -87,16 +77,12 @@ const UserFeedbacks = (feedbacks) => {
     let i = 0;
     do {
         console.log(`Feedback: ${feedbacks[i]}`);
-        if (i < feedbacks.length) {
-            i++;
-        } else {
-            console.log("No more feedback");
-        }
+        i++;
     }
     while (i < feedbacks.length);
 
 };
-const feedbacks = ["love your product", "i enjoyed it", "it was nice", "not bad"];
+const feedbacks = ["Love your product!", "I enjoyed it!", "Nice!", "Not bad!"];
 UserFeedbacks(feedbacks)
 
 
@@ -107,7 +93,7 @@ UserFeedbacks(feedbacks)
 const countDownLives = () => {
     let livesInGame = 5;
     while (livesInGame > 0) {
-        console.log(`You have ${livesInGame - 1} lives left `);
+        console.log(`Count ${livesInGame}: You have ${livesInGame - 1} lives left `);
         livesInGame--;
     };
 }
@@ -129,7 +115,7 @@ checkLoginStatus = (loginStatuses) => {
         }
     });
 }
-const loginStatuses = ["logged in", "not logged in"];
+const loginStatuses = ["logged in", "not logged in!"];
 checkLoginStatus(loginStatuses)
 
 
@@ -143,13 +129,13 @@ const supportTicketPriorities = (priorityLevel) => {
     priorityLevel.forEach((priorityLevel) => {
         switch (priorityLevel) {
             case "high":
-                console.log("Immediate action!");
+                console.log("Priority Level: This needs immediate action!");
                 break;
             case "medium":
-                console.log("Relatively quicker action!");
+                console.log("Priority Level: Give relatively quicker action!");
                 break;
             case "low":
-                console.log("Addressed later action!");
+                console.log("Priority Level: This action is addressed for later!");
                 break;
             default:
                 console.log("Unknown priority level.");
@@ -169,10 +155,10 @@ supportTicketPriorities(priorityLevel)
 
 function quizCountDown() {
     let i = 10;
-    while (i >= 0) {
+    while (i > 0) {
         console.log(`Time left ${i} seconds`);
         i--;
     }
-
+    console.log("Time is up!")
 }
 quizCountDown();
